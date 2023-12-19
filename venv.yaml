@@ -1,0 +1,16 @@
+name: nlp-tunnel-vision
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - gradio
+  - openai
+  - pytorch
+  - tqdm
+  - pandas
+  - PyYAML
+
