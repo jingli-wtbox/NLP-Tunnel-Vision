@@ -1,0 +1,6 @@
+gradio
+pandas
+transformers
+torch 
+openai
+tqdm
