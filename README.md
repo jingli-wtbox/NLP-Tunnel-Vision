@@ -168,7 +168,7 @@ This project is a part of the NLP Tunnel Vision. The goal of this project is to 
 ### 7. Deploy model as a web service (optional)
 * Register Docker Hub account
 
-    Register a Docker Hub account before the following steps and copy account name.
+    Register a [Docker Hub account](https://hub.docker.com/signup) before the following steps and copy account name.
 
 * Install Paperspace CLI
 
