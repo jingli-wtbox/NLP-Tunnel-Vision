@@ -12,6 +12,7 @@
     - [6. Run docker container locally (optional)](#6-run-docker-container-locally-optional)
     - [7. Deploy model as a web service (optional)](#7-deploy-model-as-a-web-service-optional)
 - [To-Do-List](#to-do-list-)
+- [Bugs](#bugs-)
 
 ## Introduction 📖
 This project is a part of the NLP Tunnel Vision. The goal of this project is to generate comments for a new article by considering the history of articles and comments of a news reader. The project is divided into four parts:
