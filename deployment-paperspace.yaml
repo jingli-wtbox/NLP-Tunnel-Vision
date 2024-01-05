@@ -1,0 +1,12 @@
+image: jinglishi/nlp-tunnel-vision:latest
+port: 8080
+env:
+  - name: OPENAI_TEMPERATURE
+    value: "0.9"
+  - name: OPENAI_API_KEY
+    value: secret:OPENAI_API_KEY
+  - name: OPENAI_FINE_TUNED_MODEL_ID
+    value: secret:OPENAI_FINE_TUNED_MODEL_ID
+resources:
+  replicas: 1
+  instanceType: C4

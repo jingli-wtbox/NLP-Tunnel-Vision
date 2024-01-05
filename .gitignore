@@ -3,3 +3,7 @@
 __pycache__
 *.zip
 kaggle.json
+.env
+*.ipynb
+file-*.json
+ftjob-*.json

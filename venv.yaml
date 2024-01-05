@@ -1,16 +1,18 @@
 name: nlp-tunnel-vision
 channels:
-  - pytorch
   - conda-forge
   - defaults
 
 dependencies:
   - python=3.10
-  - pip
-  - gradio
-  - openai
-  - pytorch
-  - tqdm
-  - pandas
-  - PyYAML
+  - pip=23.3.2
+  - openai=1.5.0
+  - tqdm=4.66.1
+  - pandas=2.1.4
+  - PyYAML=6.0.1
+  - python-dotenv=1.0.0
+  - tiktoken=0.5.2
+  - fastapi=0.108.0
+  - pydantic=2.5.2
+  - uvicorn=0.25.0
 
