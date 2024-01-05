@@ -146,7 +146,7 @@ This project is a part of the NLP Tunnel Vision. The goal of this project is to 
 
 * Build and up docker container
 
-    Before running the docker container, make sure the fine-tuning job is completed and all values in `.env` is updated. Then run the following command to build and up the docker container locally, and the service will be live (http://127.0.0.1:8080).
+    Before running the docker container, make sure the fine-tuning job is completed and all values in `.env` is updated (including `OPENAI_API_KEY`, `OPENAI_FINE_TUNED_MODEL_ID`, and `OPENAI_TEMPERATURE`). Then run the following command to build and up the docker container locally, and the service will be live (http://127.0.0.1:8080).
 
     ```bash
     docker compose --env-file .env up --build
@@ -176,7 +176,7 @@ This project is a part of the NLP Tunnel Vision. The goal of this project is to 
 
 * Set secret values in Paperspace Secrets
 
-    Login Paperspace, create two pairs of name-value in `Team settings -->Secrets`: `OPENAI_API_KEY` and `OPENAI_FINE_TUNED_MODEL_ID` (found it in `models/ftjob-xxx.json`).
+    Login Paperspace, create two pairs of name-value in `Paperspace --> Account --> Team settings --> Secrets`: `OPENAI_API_KEY` and `OPENAI_FINE_TUNED_MODEL_ID` (found it in `models/ftjob-xxx.json`).
 
 * Deploy model API to Paperspace
 
@@ -186,7 +186,7 @@ This project is a part of the NLP Tunnel Vision. The goal of this project is to 
 
 * Send POST request to generate comment
 
-    Use Postman to send a POST request to http://<paperspace_deployment_endpoint>/infer with the following body to generate comment.
+    Use Postman to send a POST request to http://<paperspace_deployment_endpoint>/infer with the following body to generate comment. The deployment endpoint can be found in `Paperspace --> <Project> --> Deployments --> <deployment_name> --> Endpoint`.
     ```json
     {
         "history": [
