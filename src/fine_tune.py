@@ -45,8 +45,13 @@ def is_file_uploaded(args):
     for f in list_files:
         if f.filename == os.path.basename(args.training_file):
             print(f"File {f.filename} is already uploaded.")
-            args.openai_file_info = f
-            return True
+            if args.delete_old_dataset:
+                print(f"Deleting old dataset {f.filename}.")
+                args.openai_client.files.delete(f.id)
+                continue
+            else:
+                args.openai_file_info = f
+                return True
     return False
 
 def serialize_hyperparameters(obj):
@@ -95,6 +100,7 @@ if __name__ == '__main__':
     parser.add_argument("--openai_file_info", type=FileObject, help="openai train file info")
     parser.add_argument("--openai_ft_job_info", type=FineTuningJob, help="openai fine-tune job info")
     parser.add_argument("--output_dir", type=str, default="models", help="The path to save fine-tuned model.")
+    parser.add_argument("--delete_old_dataset", action='store_true', help="Delete old dataset.")
     args = parser.parse_args()
 
     config = yaml.safe_load(open(args.config_file, 'r'))
