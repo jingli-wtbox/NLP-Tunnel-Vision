@@ -204,3 +204,7 @@ This project is a part of the NLP Tunnel Vision. The goal of this project is to 
 - [ ] Optimize the prompt for model fine-tuning
 - [ ] Try different window sizes for the model
 - [ ] Create UI for comment generation
+
+
+## Bugs 🐞
+- [ ] The project docker image is build using python 3.10, however, the Paperspace deployment is using python 3.8 because of the Paperspace SDK. Therefore, the project docker image should be built using python 3.8 in the future.
